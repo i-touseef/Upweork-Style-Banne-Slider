@@ -1,7 +1,6 @@
 /* Page background and center slider */
 body {
   margin: 0;
-  background: #f4f4f4;
   display: flex;
   justify-content: center;
 }
