@@ -1,22 +1,19 @@
 const slides = document.querySelectorAll(".slide");
-const slider = document.querySelector(".slider");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+let currentIndex = 0;
 
-let index = 0;
+document.getElementById("nextBtn").addEventListener("click", () => {
+  changeSlide(currentIndex + 1);
+});
 
-function showSlide(i) {
-  if (i >= slides.length) index = 0;
-  else if (i < 0) index = slides.length - 1;
-  else index = i;
+document.getElementById("prevBtn").addEventListener("click", () => {
+  changeSlide(currentIndex - 1);
+});
 
-  slider.style.transform = `translateX(-${index * 100}%)`;
+function changeSlide(index) {
+  slides[currentIndex].classList.remove("active");
+  currentIndex = (index + slides.length) % slides.length;
+  slides[currentIndex].classList.add("active");
+
+  document.querySelector(".slider-wrapper").style.transform = 
+    `translateX(-${currentIndex * 100}%)`;
 }
-
-prevBtn.addEventListener("click", () => showSlide(index - 1));
-nextBtn.addEventListener("click", () => showSlide(index + 1));
-
-// Auto-slide every 5 seconds
-setInterval(() => {
-  showSlide(index + 1);
-}, 5000);
