@@ -1,43 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upwork-Style Banner Slider</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Slider with Progress Bars</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="slider">
-    <div class="slider-wrapper">
-      <div class="slide active">
-        <h2>Find the right freelance services for your business</h2>
-        <p>Work with talented freelancers to get your projects done.</p>
-      </div>
-      <div class="slide">
-        <h2>Hire the best talent for your projects</h2>
-        <p>Connect with professionals from around the world.</p>
-      </div>
-      <div class="slide">
-        <h2>Get more done with top-rated freelancers</h2>
-        <p>Work smarter and faster with experts in every field.</p>
-      </div>
-    </div>
 
-    <!-- Navigation Arrows -->
-    <button class="arrow left" id="prevBtn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-    <button class="arrow right" id="nextBtn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </button>
-  </section>
+<div class="banner-slider">
+  <div class="slides">
+    <div class="slide active"><img src="https://picsum.photos/id/1015/1200/525" alt="Slide 1"></div>
+    <div class="slide"><img src="https://picsum.photos/id/1016/1200/525" alt="Slide 2"></div>
+    <div class="slide"><img src="https://picsum.photos/id/1018/1200/525" alt="Slide 3"></div>
+    <div class="slide"><img src="https://picsum.photos/id/1020/1200/525" alt="Slide 4"></div>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="indicators">
+    <button class="indicator" data-slide="0"><span class="bar"></span></button>
+    <button class="indicator" data-slide="1"><span class="bar"></span></button>
+    <button class="indicator" data-slide="2"><span class="bar"></span></button>
+    <button class="indicator" data-slide="3"><span class="bar"></span></button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
